@@ -41,4 +41,23 @@ scrape_configs:
       type: 'A'
       port: 9100
 
+  - job_name: 'flask'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['10.0.5.126:5000']
+
+  - job_name: 'nodeexporter_DVkp'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['10.0.5.126:9100']
+
+  - job_name: 'nodeexporter_dvubuntu'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['10.0.5.98:9100']
+
+  - job_name: 'nodeexporter_dvdev2950'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['10.0.5.32:9100']
 
